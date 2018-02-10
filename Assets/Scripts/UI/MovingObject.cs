@@ -1,22 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Block : MonoBehaviour {
-
-	public event System.Action<Block> OnBlockClick;
+[System.Serializable]
+public class MovingObject {
+	
+	public event System.Action<MovingObject> OnBlockClick;
 	public Vector2 offset;
 	public float offsetTime = .1f;
 	public GameObject objectToMove;
-	public Button buttonTrigger;
-
-	void Start(){
-		if(objectToMove == null)
-			objectToMove = this.gameObject;
-		
-		buttonTrigger.onClick.AddListener (OnClick);
-	}
+	public List<Button> buttonTriggers;
 
 	public void OnClick(){
 		//Debug.Log ("click");
