@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Newtonsoft.Json;
+using System.IO;
 
 public class CoordsToLawDatabase : MonoBehaviour {
 
@@ -14,6 +16,11 @@ public class CoordsToLawDatabase : MonoBehaviour {
 	}
 
 	private void Start () {
+		//WriteJsonDatabase ();
+		ReadJsonDatabase ();
+	}
+
+	private void WriteJsonDatabase () {
 		Laws = new Law[] {
 			new Law (new Vector2 [] { 
 				new Vector2 (121, 300), 
@@ -28,7 +35,19 @@ public class CoordsToLawDatabase : MonoBehaviour {
 				new Vector2 (398, 120), 
 				new Vector2 (900, 1090)}, "YOU CAN FISH ANYTHING U WANT")
 		};
+		string json = JsonConvert.SerializeObject (Laws, Formatting.Indented);
+
+		File.WriteAllText (Path.Combine (Application.streamingAssetsPath, "Law Database.json"), json);
+
 	}
+
+
+	private void ReadJsonDatabase () {
+		string json = File.ReadAllText (Path.Combine (Application.streamingAssetsPath, "Law Database.json"));
+		Laws = JsonConvert.DeserializeObject<Law[]> (json);
+
+	}
+
 
 }
 
@@ -36,6 +55,7 @@ public class Law {
 
 	public Vector2 [] coordinates;
 	public string statement;
+	public string punishment;
 
 	public Law (Vector2[] coords, string statement) {
 		coordinates = coords;
@@ -44,7 +64,10 @@ public class Law {
 
 	public override string ToString ()
 	{
-		return statement;
+		string lawString = statement;
+		if (punishment != null)
+			lawString += " \nPunishment: "+ punishment;
+		return lawString;
 	}
 
 }

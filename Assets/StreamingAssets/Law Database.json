@@ -1,0 +1,56 @@
+[
+  {
+    "coordinates": [
+      {
+        "x": 121.0,
+        "y": 300.0
+      },
+      {
+        "x": 300.0,
+        "y": 400.0
+      },
+      {
+        "x": 400.0,
+        "y": 323.0
+      }
+    ],
+    "statement": "You cannot fish with a net here!",
+    "punishment": "u will go to jail for 3 years"
+  },
+  {
+    "coordinates": [
+      {
+        "x": 121.0,
+        "y": 300.0
+      },
+      {
+        "x": 222.0,
+        "y": 333.0
+      },
+      {
+        "x": 111.0,
+        "y": 222.0
+      }
+    ],
+    "statement": "DO NOT FISH HERE ITS ILLEGAL",
+    "punishment": null
+  },
+  {
+    "coordinates": [
+      {
+        "x": 555.0,
+        "y": 444.0
+      },
+      {
+        "x": 398.0,
+        "y": 120.0
+      },
+      {
+        "x": 900.0,
+        "y": 1090.0
+      }
+    ],
+    "statement": "YOU CAN FISH ANYTHING U WANT",
+    "punishment": null
+  }
+]
