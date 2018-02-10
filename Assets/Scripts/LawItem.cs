@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class LawItem : MonoBehaviour {
 
-	TextMeshProUGUI titleText;
-	TextMeshProUGUI descriptionText;
-	TextMeshProUGUI punishmentTitleText;
-	TextMeshProUGUI punishmentDescriptionText;
+	public TextMeshProUGUI titleText;
+	public Text descriptionText;
+	public Text punishmentTitleText;
+	public Text punishmentDescriptionText;
 
 	public Law Law {
 		set { 

@@ -7,10 +7,16 @@ public class UIManager : MonoBehaviour {
 
 	List<Block> blocksToAnimate = new List<Block>();
 	public Dropdown countryDropDown;
+	public CountryDatabase countryDatabase;
 
-	List<string> country = new List<string>(){"Malaysia", "Indonesia", "Singapore"};
+	List<string> countryNames = new List<string>(){"Malaysia", "Indonesia", "Singapore"};
 
 	void Start(){
+
+		foreach (var country in countryDatabase.countries) {
+			countryNames.Add (country.name);
+		}
+
 		PopulateList (countryDropDown);
 		blocksToAnimate.AddRange(FindObjectsOfType<Block>());
 
@@ -39,7 +45,7 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void PopulateList(Dropdown dropDown){
-		dropDown.AddOptions (country);
+		dropDown.AddOptions (countryNames);
 	}
 
 }

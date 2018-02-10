@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224440237955563362}
+  - component: {fileID: 114400364532376288}
   m_Layer: 5
   m_Name: LawItem
   m_TagString: Untagged
@@ -272,6 +273,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: asfadsfadsfsdfsffknsdlnflnfklanfnfnsanfnskfsflsdfksnfsnadsnfsdaknfdslfndslfdskfndskfnasf
+--- !u!114 &114400364532376288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1064871277888368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6d6ae03905e764782c60df3d102052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: {fileID: 114096643511060166}
+  descriptionText: {fileID: 114458736219604072}
+  punishmentTitleText: {fileID: 114042304513762442}
+  punishmentDescriptionText: {fileID: 114386242632861860}
 --- !u!114 &114458736219604072
 MonoBehaviour:
   m_ObjectHideFlags: 1

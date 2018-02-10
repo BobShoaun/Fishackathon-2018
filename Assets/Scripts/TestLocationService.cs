@@ -13,7 +13,7 @@ public class TestLocationService : MonoBehaviour {
 		}
 
         // Start service before querying location
-        Input.location.Start();
+        Input.location.Start ();
 
         // Wait until service initializes
         int maxWait = 20;

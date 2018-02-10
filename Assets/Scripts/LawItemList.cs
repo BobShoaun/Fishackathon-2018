@@ -8,8 +8,11 @@ public class LawItemList : MonoBehaviour {
 	public Transform parent;
 	public GameObject lawItemPrefab;
 
-	public void UpdateList (string country) {
-		foreach (Law law in countryDatabase [country].laws) {
+	public void UpdateList (int country) {
+		foreach (Transform transform in parent) {
+			DestroyImmediate (transform.gameObject);
+		}
+		foreach (Law law in countryDatabase.countries [country].laws) {
 			Instantiate (lawItemPrefab, parent).GetComponent<LawItem> ().Law = law;
 		}
 	}

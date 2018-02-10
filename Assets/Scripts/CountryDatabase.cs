@@ -23,7 +23,8 @@ public class CountryDatabase : MonoBehaviour {
 
 
 	private void Start () {
-		WriteJsonDatabase ();
+		//WriteJsonDatabase ();
+		ReadJsonDatabase ();
 	}
 
 	private void WriteJsonDatabase () {
@@ -39,6 +40,12 @@ public class CountryDatabase : MonoBehaviour {
 					new Law {
 						title = "LAW OF LMAO",
 						description = "DO NOT FISH HERE!",
+						punishmentTitle = "DEATH SENTENCE",
+						punishmentDescription = "Die"
+					},
+					new Law {
+						title = "FISHING LAW 300",
+						description = "",
 						punishmentTitle = "DEATH SENTENCE",
 						punishmentDescription = "Die"
 					}
@@ -69,10 +76,5 @@ public class CountryDatabase : MonoBehaviour {
 		string json = File.ReadAllText (Path.Combine (Application.streamingAssetsPath, "Database.json"));
 		countries = JsonConvert.DeserializeObject<Country[]> (json);
 	}
-
-
-
-
-
 
 }
