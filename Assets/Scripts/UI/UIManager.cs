@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour {
 
 	List<Block> blocksToAnimate = new List<Block>();
-	public Dropdown countryDropDown;
+	public TMP_Dropdown countryDropdown;
 	public CountryDatabase countryDatabase;
 
-	List<string> countryNames = new List<string>(){"Malaysia", "Indonesia", "Singapore"};
+	List<string> countryNames = new List<string>();
 
 	void Start(){
 
@@ -17,7 +18,7 @@ public class UIManager : MonoBehaviour {
 			countryNames.Add (country.name);
 		}
 
-		PopulateList (countryDropDown);
+		PopulateList ();
 		blocksToAnimate.AddRange(FindObjectsOfType<Block>());
 
 		foreach (Block b in blocksToAnimate) {
@@ -26,7 +27,9 @@ public class UIManager : MonoBehaviour {
 	}
 
 	void MoveBlock(Block block){
-		StartCoroutine (MoveAnimation(block.objectToMove.GetComponent<RectTransform>(), block.offset, block.offsetTime));
+		Vector2 finalOffset = new Vector2( block.offset.x * (block.objectToMove.GetComponent<RectTransform> ().rect.width * GetComponent<Canvas> ().scaleFactor),
+            block.offset.y *(block.objectToMove.GetComponent<RectTransform> ().rect.height * GetComponent<Canvas> ().scaleFactor) );
+		StartCoroutine (MoveAnimation(block.objectToMove.GetComponent<RectTransform>(), finalOffset, block.offsetTime));
 	}
 
 	IEnumerator MoveAnimation(RectTransform transform, Vector2 offset, float offsetTime){
@@ -44,8 +47,8 @@ public class UIManager : MonoBehaviour {
 		objectToShow.SetActive (true);
 	}
 
-	public void PopulateList(Dropdown dropDown){
-		dropDown.AddOptions (countryNames);
+	public void PopulateList(){
+		countryDropdown.AddOptions (countryNames);
 	}
 
 }

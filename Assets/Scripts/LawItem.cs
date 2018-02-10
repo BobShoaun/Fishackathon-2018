@@ -7,15 +7,15 @@ using UnityEngine.UI;
 public class LawItem : MonoBehaviour {
 
 	public TextMeshProUGUI titleText;
-	public Text descriptionText;
-	public Text punishmentTitleText;
-	public Text punishmentDescriptionText;
+	public TextMeshProUGUI descriptionText;
+	public TextMeshProUGUI punishmentTitleText;
+	public TextMeshProUGUI punishmentDescriptionText;
 
 	public Law Law {
 		set { 
-			titleText.text = value.title;
+			//titleText.text = value.title;
 			descriptionText.text = value.description;
-			punishmentTitleText.text = value.punishmentTitle;
+			//punishmentTitleText.text = value.punishmentTitle;
 			punishmentDescriptionText.text = value.punishmentDescription;
 
 		}
