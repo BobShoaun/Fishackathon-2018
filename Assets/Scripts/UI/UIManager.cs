@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour {
 	public List<MovingObject> movingObject;
 	public TMP_Dropdown countryDropdown;
 	public CountryDatabase countryDatabase;
+	public TextMeshProUGUI titleText;
 
 	List<string> countryNames = new List<string>();
 
@@ -37,6 +38,7 @@ public class UIManager : MonoBehaviour {
 		foreach (var page in pages)
 			page.SetActive (false);
 		pages [index].SetActive (true);
+		titleText.text = pages [index].name;
 	}
 
 	void Move (MovingObject obj) {

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -667331979, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
-  m_Name: Roboto-Medium SDF
+  m_Name: Roboto Medium Border
   m_EditorClassIdentifier: 
   hashCode: -737250198
   material: {fileID: 21675824737672872}
@@ -18,12 +18,12 @@ MonoBehaviour:
   m_fontInfo:
     Name: Roboto
     PointSize: 71
-    Scale: 0
+    Scale: 1
     CharacterCount: 98
     LineHeight: 83.1875
     Baseline: 0
     Ascender: 65.875
-    CapHeight: 0
+    CapHeight: 50.5
     Descender: -17.3125
     CenterLine: 0
     SuperscriptOffset: 65.875
@@ -33,19 +33,19 @@ MonoBehaviour:
     UnderlineThickness: 3.4667969
     strikethrough: 17.65909
     strikethroughThickness: 3.4667969
-    TabWidth: 0
+    TabWidth: 176.875
     Padding: 5
     AtlasWidth: 512
     AtlasHeight: 512
-  atlas: {fileID: 28050867227879868}
+  atlas: {fileID: 28974557488321846}
   m_glyphInfoList:
   - id: 32
     x: 6
     y: 517
-    width: 0
-    height: 0
+    width: 17.6875
+    height: 83.1875
     xOffset: 0
-    yOffset: 0
+    yOffset: 65.875
     xAdvance: 17.6875
     scale: 1
   - id: 33
@@ -999,7 +999,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 28050867227879868}
+        m_Texture: {fileID: 28974557488321846}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
@@ -1067,7 +1067,7 @@ Material:
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
---- !u!28 &28050867227879868
+--- !u!28 &28974557488321846
 Texture2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
