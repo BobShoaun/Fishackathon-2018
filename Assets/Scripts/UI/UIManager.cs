@@ -8,23 +8,29 @@ public class UIManager : MonoBehaviour {
 
 	void Start(){
 		blocksToAnimate.AddRange(FindObjectsOfType<Block>());
+
+		foreach (Block b in blocksToAnimate) {
+			b.OnBlockClick += MoveBlock;
+		}
 	}
 
 	void MoveBlock(Block block){
-		StartCoroutine (MoveAnimation(block.transform, block.offset, block.offsetTime));
+		StartCoroutine (MoveAnimation(block.objectToMove.GetComponent<RectTransform>(), block.offset, block.offsetTime));
 	}
 
-	IEnumerator MoveAnimation(Transform transform, Vector2 offset, float offsetTime){
+	IEnumerator MoveAnimation(RectTransform transform, Vector2 offset, float offsetTime){
 		float percent = 0;
 		Vector2 startingPos = transform.position;
 
-		while(percent > 1.0f){
+		while(percent < 1.0f){
 			percent += Time.deltaTime / offsetTime;
 			transform.position = Vector2.Lerp (startingPos, startingPos + offset, percent);
 			yield return null;
 		}
+	}
 
-
+	public void DisplayPage(GameObject objectToShow){
+		
 	}
 
 
