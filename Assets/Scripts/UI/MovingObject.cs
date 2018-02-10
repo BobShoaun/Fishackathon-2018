@@ -12,4 +12,5 @@ public class MovingObject {
 	public GameObject objectToMove;
 	public List<Button> buttonTriggers;
 	public UnityEvent callback;
+
 }

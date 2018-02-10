@@ -6,14 +6,15 @@ using TMPro;
 using UnityEngine.Events;
 
 public class UIManager : MonoBehaviour {
-	
+
+	public GameObject[] pages;
 	public List<MovingObject> movingObject;
 	public TMP_Dropdown countryDropdown;
 	public CountryDatabase countryDatabase;
 
 	List<string> countryNames = new List<string>();
 
-	void Start(){
+	void Start () {
 		
 		foreach (var country in countryDatabase.countries) {
 			countryNames.Add (country.name);
@@ -22,8 +23,6 @@ public class UIManager : MonoBehaviour {
 		PopulateList ();
 
 		foreach (MovingObject o in movingObject) {
-			//o.OnBlockClick += Move;
-
 			if (o.buttonTriggers == null)
 				continue;
 			foreach(Button but in o.buttonTriggers){
@@ -32,6 +31,12 @@ public class UIManager : MonoBehaviour {
 			}
 
 		}
+	}
+
+	public void SwitchPage (int index) {
+		foreach (var page in pages)
+			page.SetActive (false);
+		pages [index].SetActive (true);
 	}
 
 	void Move (MovingObject obj) {
