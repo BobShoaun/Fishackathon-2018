@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
 
 	List<Block> blocksToAnimate = new List<Block>();
+	public Dropdown countryDropDown;
+
+	List<string> country = new List<string>(){"Malaysia", "Indonesia", "Singapore"};
 
 	void Start(){
+		PopulateList (countryDropDown);
 		blocksToAnimate.AddRange(FindObjectsOfType<Block>());
 
 		foreach (Block b in blocksToAnimate) {
@@ -30,8 +35,11 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void DisplayPage(GameObject objectToShow){
-		
+		objectToShow.SetActive (true);
 	}
 
+	public void PopulateList(Dropdown dropDown){
+		dropDown.AddOptions (country);
+	}
 
 }
