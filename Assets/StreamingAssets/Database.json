@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Malaysia",
+    "coordinates": [
+      {
+        "x": 111.0,
+        "y": 222.0
+      },
+      {
+        "x": 222.0,
+        "y": 333.0
+      }
+    ],
+    "laws": [
+      {
+        "title": "LAW OF LMAO",
+        "description": "DO NOT FISH HERE!",
+        "punishmentTitle": "DEATH SENTENCE",
+        "punishmentDescription": "Die"
+      }
+    ]
+  },
+  {
+    "name": "Indonesia",
+    "coordinates": [
+      {
+        "x": 444.0,
+        "y": 555.0
+      },
+      {
+        "x": 999.0,
+        "y": 1000.0
+      }
+    ],
+    "laws": [
+      {
+        "title": "LAW OF INDO",
+        "description": "DO NOT PEE IN THE SEA!",
+        "punishmentTitle": "CUT",
+        "punishmentDescription": "cut"
+      }
+    ]
+  }
+]

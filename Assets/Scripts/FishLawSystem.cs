@@ -5,8 +5,6 @@ using TMPro;
 
 public class FishLawSystem : MonoBehaviour {
 
-	public CoordsToLawDatabase database;
-
 	public Vector2 currentCoordinates;
 	[SerializeField]
 	private int updateRate = 5;
@@ -16,8 +14,10 @@ public class FishLawSystem : MonoBehaviour {
 
 	public TextMeshProUGUI lawText;
 
+	CountryDatabase countryDatabase;
+
 	private void Start () {
-		database = GetComponent<CoordsToLawDatabase> ();
+		countryDatabase = GetComponent<CountryDatabase> ();
 	}
 
 	public void SourceDatabaseFromCoords () {
@@ -25,12 +25,9 @@ public class FishLawSystem : MonoBehaviour {
 		float lattitude = float.Parse (Lattitude);
 		Vector2 coords = new Vector2 (longitude, lattitude);
 
-
-
 		string lawString = "The Laws in this coords are: \n";
 
-
-		foreach (Law law in database [coords]) {
+		foreach (Law law in countryDatabase [coords].laws) {
 			lawString += law;
 			lawString += "\n";
 		}
@@ -47,6 +44,10 @@ public class FishLawSystem : MonoBehaviour {
 			yield return new WaitForSeconds (updateRate);
 			// source GPS for current coords, set curretn coords to current location
 		}
+	}
+
+	public void Search () {
+		
 	}
 
 }
