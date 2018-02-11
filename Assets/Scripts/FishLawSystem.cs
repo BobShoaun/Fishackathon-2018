@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Location;
 using System.Linq;
+using UnityEngine.Events;
 
 public class FishLawSystem : MonoBehaviour {
 
@@ -21,8 +22,12 @@ public class FishLawSystem : MonoBehaviour {
 	public TextMeshProUGUI debugText;
 
 	CountryDatabase countryDatabase;
+	private Country previousCountry;
+
+	UIManager uimanager;
 
 	private void Start () {
+		UIManager = FindObjectOfType<UIManager> ();
 		GPS.Initialize ();
 		countryDatabase = GetComponent<CountryDatabase> ();
 		StartCoroutine (SourceGPSLocation ());
@@ -61,6 +66,14 @@ public class FishLawSystem : MonoBehaviour {
 			coordinatesText.text = countryDatabase.coordsList [nearest].ToString ();
 
 			Country currentCountry = countryDatabase.countryList [nearest];
+
+			if (previousCountry != null && currentCountry != previousCountry) {
+				uimanager.SendPushUp ("You have crossed to a new region: " + currentCountry.name, 
+					"Check the app for updated fishing rules and regulations");
+			}
+
+			previousCountry = currentCountry;
+
 			currentCountryText.text = "About your current Location \n <size=150%>" + currentCountry.name + "</size>";
 			// source GPS for current coords, set curretn coords to current location
 		
