@@ -18,12 +18,20 @@ public class FishLawSystem : MonoBehaviour {
 	public TextMeshProUGUI coordinatesText;
 	public TextMeshProUGUI currentCountryText;
 
+	public TextMeshProUGUI debugText;
+
 	CountryDatabase countryDatabase;
 
 	private void Start () {
 		GPS.Initialize ();
 		countryDatabase = GetComponent<CountryDatabase> ();
 		StartCoroutine (SourceGPSLocation ());
+
+		string debug = "";
+		foreach (var geo in countryDatabase.coordsList) {
+			debug = debug + geo.ToString () + "\n";
+		}
+		debugText.text = debug;
 	}
 
 //	public void SourceDatabaseFromCoords () {
@@ -41,9 +49,6 @@ public class FishLawSystem : MonoBehaviour {
 //		//lawText.text = lawString;
 //	}
 
-	private void GetNearestCoordsTo (Vector2 coords) {
-		
-	}
 
 	private IEnumerator SourceGPSLocation () {
 		while (true) {
