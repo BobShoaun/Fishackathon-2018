@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour {
 
@@ -34,6 +35,7 @@ public class UIManager : MonoBehaviour {
 		}
 	}
 
+	//0 - home
 	public void SwitchPage (int index) {
 		foreach (var page in pages)
 			page.SetActive (false);
@@ -59,12 +61,22 @@ public class UIManager : MonoBehaviour {
 		}
 	}
 
-	public void DisplayPage(GameObject objectToShow){
-		objectToShow.SetActive (true);
+	public void DisplayMenu(bool enable){
+		foreach (MovingObject o in movingObject) {
+			if((o.objectToMove.name == "MenuBar") && o.offset.x == 1 && enable == true){
+				Move (o);
+			}else if((o.objectToMove.name == "MenuBar") && o.offset.x == -1 && enable == false){
+				Move (o);
+			}
+		}
 	}
 
 	public void PopulateList(){
 		countryDropdown.AddOptions (countryNames);
+	}
+
+	public void DisableTouch(bool state){
+		FindObjectOfType<EventSystem> ().enabled = state;
 	}
 
 }

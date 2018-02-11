@@ -18,12 +18,12 @@ MonoBehaviour:
   m_fontInfo:
     Name: Roboto
     PointSize: 71
-    Scale: 0
+    Scale: 1
     CharacterCount: 98
     LineHeight: 83.1875
     Baseline: 0
     Ascender: 65.875
-    CapHeight: 0
+    CapHeight: 50.5
     Descender: -17.3125
     CenterLine: 0
     SuperscriptOffset: 65.875
@@ -33,7 +33,7 @@ MonoBehaviour:
     UnderlineThickness: 3.4667969
     strikethrough: 17.65909
     strikethroughThickness: 3.4667969
-    TabWidth: 0
+    TabWidth: 176.875
     Padding: 5
     AtlasWidth: 512
     AtlasHeight: 512
@@ -42,10 +42,10 @@ MonoBehaviour:
   - id: 32
     x: 6
     y: 517
-    width: 0
-    height: 0
+    width: 17.6875
+    height: 83.1875
     xOffset: 0
-    yOffset: 0
+    yOffset: 65.875
     xAdvance: 17.6875
     scale: 1
   - id: 33
@@ -1048,10 +1048,10 @@ Material:
     - _StencilWriteMask: 255
     - _TextureHeight: 512
     - _TextureWidth: 512
-    - _UnderlayDilate: 0.311
-    - _UnderlayOffsetX: 0.272
+    - _UnderlayDilate: -0.004
+    - _UnderlayOffsetX: -0.029
     - _UnderlayOffsetY: 0
-    - _UnderlaySoftness: 0.15
+    - _UnderlaySoftness: 0.609
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
     - _WeightBold: 0.75
