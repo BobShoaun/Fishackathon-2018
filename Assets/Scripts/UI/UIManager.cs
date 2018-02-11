@@ -10,19 +10,14 @@ public class UIManager : MonoBehaviour {
 
 	public GameObject[] pages;
 	public List<MovingObject> movingObject;
-	public TMP_Dropdown countryDropdown;
+
 	public CountryDatabase countryDatabase;
 	public TextMeshProUGUI titleText;
 
-	List<string> countryNames = new List<string>();
+
 
 	void Start () {
 		
-		foreach (var country in countryDatabase.countries) {
-			countryNames.Add (country.name);
-		}
-
-		PopulateList ();
 
 		foreach (MovingObject o in movingObject) {
 			if (o.buttonTriggers == null)
@@ -71,9 +66,6 @@ public class UIManager : MonoBehaviour {
 		}
 	}
 
-	public void PopulateList(){
-		countryDropdown.AddOptions (countryNames);
-	}
 
 	public void DisableTouch(bool state){
 		FindObjectOfType<EventSystem> ().enabled = state;

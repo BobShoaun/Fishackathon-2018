@@ -114,22 +114,12 @@
 	
     ],
     "laws": [
-      { 
-        "Description": "No foreign fishing vessel shall attempt to fish or conduct any techno-economic research or survey. ",
-        "PunishmentDescription": "Uncertain.\n"
-      },
       {
-        "Description": "Application for fishing permission has to go through a Malaysian agent. ",
-        "PunishmentDescription": "Uncertain.\n"
-      }, 
-      {
-        "Description": "(Section 26 of Fisheries Act 1985) No fish bombing and cyanide fishing. ",
-        "PunishmentDescription": "Uncertain.\n"
-      },
-      {
-        "Description": "(Fisheries (Maritime) (Sarawak) Regulations 1976) Otter and pair trawling are not allowed. ",
-        "PunishmentDescription": "Uncertain. "
-      }   
+        "Title": "Law of Malaysia",
+        "Description": "No foreign fishing vessel shall attempt to fish or conduct any techno-economic research or survey. \n Application for fishing permission has to go through a Malaysian agent. ",
+        "PunishmentTitle": "Uncertain.",
+        "PunishmentDescription": "Uncertain."
+      }
     ]
   },
   {
@@ -239,18 +229,11 @@
     ],
     "laws": [
       {
-        "Description": "(Permen KP 1/2015) There is imposition of size limits on wild-caught lobsters and crab, and forbids catching egg-bearing crustaceans. ",
-        "PunishmentDescription": "Uncertain.\n"
-      },
-      {
-        "Description": "(Permen KP 2/2015) Trawl and seine fisheries is banned in this region. ",
-        "PunishmentDescription": "Uncertain.\n"
-      },
-      {
-        "Description": "Fishery Boat shall be ship, boat, or other floating tool used to catch fish, support fish cash operatin, fish breeding, fish transporting, fish processing fishery training, and fishery research/exploration. ",
-        "PunishmentDescription": "Uncertain. "
+        "Title": "Law of Indonesia",
+        "Description": "(Permen KP 1/2015) There is imposition of size limits on wild-caught lobsters and crab, and forbids catching egg-bearing crustaceans. \n (Permen KP 2/2015) Trawl and seine fisheries is banned in this region. ",
+        "PunishmentTitle": "Uncertain.",
+        "PunishmentDescription": "Uncertain."
       }
-
     ]
   }
 ]

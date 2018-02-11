@@ -1,29 +1,17 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using Location;
 
-public class GPS {
+public static class GPS {
 
-    private static GPS gps;
+    private static float latitude;
+    private static float longitude;
 
-    private double latitude;
-    private double longitude;
+	public static GeoCoordinate result;
 
-    public Vector2 result;
-
-    private GPS() {  }
-
-    public static GPS getInstance()
-    {
-        if(gps == null)
-        {
-            gps = new GPS();
-        }
-        return gps;
-    }
-    
     // Use this for initialization
-    void Start () {
+	public static void Initialize () {
         // check if user has location service enabled
         if (!Input.location.isEnabledByUser)
         {
@@ -32,7 +20,7 @@ public class GPS {
         Debug.Log(Application.platform);
     }
 
-    public IEnumerator getLocation()
+    public static IEnumerator getLocation()
     {
         // turn on location services
         Input.location.Start();
@@ -61,17 +49,13 @@ public class GPS {
         else
         {
             latitude = Input.location.lastData.latitude;
-            longitude = Input.location.lastData.longitude;
+			longitude = Input.location.lastData.longitude;
         }
 
-        result.x = (float)latitude;
-        result.y = (float)longitude;
+		result.setLongitude (longitude);
+		result.setLatitude (latitude);
 
         Input.location.Stop();
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }
