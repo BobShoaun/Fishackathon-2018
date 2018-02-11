@@ -27,7 +27,7 @@ public class FishLawSystem : MonoBehaviour {
 	UIManager uimanager;
 
 	private void Start () {
-		UIManager = FindObjectOfType<UIManager> ();
+		uimanager = FindObjectOfType<UIManager> ();
 		GPS.Initialize ();
 		countryDatabase = GetComponent<CountryDatabase> ();
 		StartCoroutine (SourceGPSLocation ());

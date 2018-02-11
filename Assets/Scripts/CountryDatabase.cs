@@ -40,7 +40,14 @@ public class CountryDatabase : MonoBehaviour {
 		//WriteJsonDatabase ();
 		ReadJsonDatabase ();
 		AssignLists ();
+		StartCoroutine (Write ());
 	}
+
+	private IEnumerator Write () {
+		yield return new WaitForSeconds (10);
+		WriteJsonDatabase ();
+	}
+
 
 	private void WriteJsonDatabase () {
 
@@ -83,7 +90,7 @@ public class CountryDatabase : MonoBehaviour {
 //			},
 //		};
 		string json = JsonConvert.SerializeObject (countries, Formatting.Indented);
-		File.WriteAllText (Path.Combine (Application.streamingAssetsPath, "Database.json"), json);
+		File.WriteAllText (Path.Combine (Application.streamingAssetsPath, "Database2.json"), json);
 	}
 
 
