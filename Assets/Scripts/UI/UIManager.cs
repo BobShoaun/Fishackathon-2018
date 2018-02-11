@@ -19,14 +19,16 @@ public class UIManager : MonoBehaviour {
 	void Start () {
 		
 
-		foreach (MovingObject o in movingObject) {
-			if (o.buttonTriggers == null)
+		for (int i = 0; i < movingObject.Count; i++) {
+			
+			if (movingObject [i].buttonTriggers.Count == 0) {
 				continue;
-			foreach(Button but in o.buttonTriggers){
-				but.onClick.AddListener (() => Move (o));
-				but.onClick.AddListener (o.callback.Invoke);
 			}
-
+			for(int j = 0; j < movingObject[i].buttonTriggers.Count; j++){
+				MovingObject obj = movingObject[i];
+				movingObject[i].buttonTriggers[j].onClick.AddListener (() => Move (obj));
+				movingObject[i].buttonTriggers[j].onClick.AddListener (movingObject[i].callback.Invoke);
+			}
 		}
 	}
 
