@@ -1,0 +1,252 @@
+[
+  {
+    "name": "Malaysia",
+    "coordinates": [
+      {
+        "x": 2.85418,
+        "y": 101.15038
+      },
+      {
+        "x": 2.78285,
+        "y": 101.23552
+      },
+      {
+        "x": 2.67311,
+        "y": 101.30144
+      },
+      {
+        "x": 2.56336,
+        "y": 101.43328
+      },
+      {
+        "x": 2.47336,
+        "y": 101.54214
+      },
+      {
+        "x": 2.40201,
+        "y": 101.65749
+      },
+      {
+        "x": 2.36085,
+        "y": 101.7344
+      },
+      {
+        "x": 2.28675,
+        "y": 101.81954
+      },
+      {
+        "x": 2.22637,
+        "y": 101.89096
+      },
+      {
+        "x": 2.17149,
+        "y": 101.95962
+      },
+      {
+        "x": 2.10561,
+        "y": 102.05575
+      },
+      {
+        "x": 2.04797,
+        "y": 102.14639
+      },
+      {
+        "x": 2.10561,
+        "y": 102.05575
+      },
+      {
+        "x": 2.04797,
+        "y": 102.14639
+      },
+      {
+        "x": 2.00954,
+        "y": 102.23428
+      },
+      {
+        "x": 1.97962,
+        "y": 102.26948
+      },
+      {
+        "x": 1.90524,
+        "y": 102.3716
+      },
+      {
+        "x": 1.79818,
+        "y": 102.51718
+      },
+      {
+        "x": 1.61972,
+        "y": 102.7836
+      },
+      {
+        "x": 1.54285,
+        "y": 102.87698
+      },
+      {
+        "x": 1.46323,
+        "y": 102.96487
+      },
+      {
+        "x": 1.38909,
+        "y": 103.0253
+      },
+      {
+        "x": 1.33692,
+        "y": 103.10769
+      },
+      {
+        "x": 1.33692,
+        "y": 103.18735
+      },
+      {
+        "x": 1.33692,
+        "y": 103.29446
+      },
+      {
+        "x": 1.26553,
+        "y": 103.42904
+      },
+      {
+        "x": 1.16118,
+        "y": 103.55539
+      }
+    ],
+    "laws": [
+      {
+        "description": "No foreign fishing vessel shall attempt to fish or conduct any techno-economic research or survey. ",
+        "punishmentDescription": "Uncertain.\n"
+      },
+      {
+        "description": "Application for fishing permission has to go through a Malaysian agent. ",
+        "punishmentDescription": "Uncertain.\n"
+      },
+      {
+        "description": "(Section 26 of Fisheries Act 1985) No fish bombing and cyanide fishing. ",
+        "punishmentDescription": "Uncertain.\n"
+      },
+      {
+        "description": "(Fisheries (Maritime) (Sarawak) Regulations 1976) Otter and pair trawling are not allowed. ",
+        "punishmentDescription": "Uncertain. "
+      }
+    ]
+  },
+  {
+    "name": "Indonesia",
+    "coordinates": [
+      {
+        "x": 2.68958,
+        "y": 100.94988
+      },
+      {
+        "x": 2.61824,
+        "y": 101.10369
+      },
+      {
+        "x": 2.54141,
+        "y": 101.24651
+      },
+      {
+        "x": 2.44263,
+        "y": 101.40032
+      },
+      {
+        "x": 2.39927,
+        "y": 101.49545
+      },
+      {
+        "x": 2.33889,
+        "y": 101.57235
+      },
+      {
+        "x": 2.26754,
+        "y": 101.62728
+      },
+      {
+        "x": 2.19618,
+        "y": 101.72616
+      },
+      {
+        "x": 2.0864,
+        "y": 101.91293
+      },
+      {
+        "x": 1.99307,
+        "y": 101.99533
+      },
+      {
+        "x": 1.93268,
+        "y": 102.0997
+      },
+      {
+        "x": 1.84484,
+        "y": 102.19857
+      },
+      {
+        "x": 1.77347,
+        "y": 102.34139
+      },
+      {
+        "x": 1.69111,
+        "y": 102.46774
+      },
+      {
+        "x": 1.61972,
+        "y": 102.56661
+      },
+      {
+        "x": 1.56481,
+        "y": 102.66
+      },
+      {
+        "x": 1.48245,
+        "y": 102.7424
+      },
+      {
+        "x": 1.41655,
+        "y": 102.83578
+      },
+      {
+        "x": 1.34516,
+        "y": 102.93466
+      },
+      {
+        "x": 1.27926,
+        "y": 103.03903
+      },
+      {
+        "x": 1.2518,
+        "y": 103.15988
+      },
+      {
+        "x": 1.22434,
+        "y": 103.25875
+      },
+      {
+        "x": 1.19139,
+        "y": 103.36862
+      },
+      {
+        "x": 1.11999,
+        "y": 103.50595
+      },
+      {
+        "x": 1.02662,
+        "y": 103.57736
+      }
+    ],
+    "laws": [
+      {
+        "description": "(Permen KP 1/2015) There is imposition of size limits on wild-caught lobsters and crab, and forbids catching egg-bearing crustaceans. ",
+        "punishmentDescription": "Uncertain.\n"
+      },
+      {
+        "description": "(Permen KP 2/2015) Trawl and seine fisheries is banned in this region. ",
+        "punishmentDescription": "Uncertain.\n"
+      },
+      {
+        "description": "Fishery Boat shall be ship, boat, or other floating tool used to catch fish, support fish cash operatin, fish breeding, fish transporting, fish processing fishery training, and fishery research/exploration. ",
+        "punishmentDescription": "Uncertain. "
+      }
+    ]
+  }
+]

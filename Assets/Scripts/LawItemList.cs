@@ -12,11 +12,16 @@ public class LawItemList : MonoBehaviour {
 	List<string> countryNames = new List<string>();
 
 	private void Start () {
+		countryDatabase.databaseReady += OnDatabaseReady;
+	
+	}
+
+	private void OnDatabaseReady () {
 		foreach (var country in countryDatabase.countries) {
 			countryNames.Add (country.name);
 		}
 
-		PopulateList ();	
+		PopulateList ();
 	}
 
 

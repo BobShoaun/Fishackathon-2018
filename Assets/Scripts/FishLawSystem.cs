@@ -27,16 +27,25 @@ public class FishLawSystem : MonoBehaviour {
 	UIManager uimanager;
 
 	private void Start () {
+
+
 		uimanager = FindObjectOfType<UIManager> ();
 		GPS.Initialize ();
 		countryDatabase = GetComponent<CountryDatabase> ();
+
+		countryDatabase.databaseReady += OnDatabaseReady;
+
+	}
+
+	private void OnDatabaseReady () {
 		StartCoroutine (SourceGPSLocation ());
 
-		string debug = "";
-		foreach (var geo in countryDatabase.coordsList) {
-			debug = debug + geo.ToString () + "\n";
-		}
-		debugText.text = debug;
+
+//		string debug = "";
+//		foreach (var geo in countryDatabase.coordsList) {
+//			debug = debug + geo.ToString () + "\n";
+//		}
+//		debugText.text = debug;
 	}
 
 //	public void SourceDatabaseFromCoords () {

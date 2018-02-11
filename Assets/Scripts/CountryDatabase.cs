@@ -5,10 +5,12 @@ using System.Linq;
 using Newtonsoft.Json;
 using System.IO;
 using Location;
+using System;
 
 public class CountryDatabase : MonoBehaviour {
 
 	public Country[] countries;
+	public event Action databaseReady;
 
 	public List<Country> countryList = new List<Country> ();
 	public List<GeoCoordinate> coordsList = new List<GeoCoordinate> ();
@@ -38,16 +40,10 @@ public class CountryDatabase : MonoBehaviour {
 
 	private void Awake () {
 		//WriteJsonDatabase ();
-		ReadJsonDatabase ();
-		AssignLists ();
-		StartCoroutine (Write ());
-	}
+		StartCoroutine (ReadJsonDatabase ());
 
-	private IEnumerator Write () {
-		yield return new WaitForSeconds (10);
-		WriteJsonDatabase ();
 	}
-
+		
 
 	private void WriteJsonDatabase () {
 
@@ -94,9 +90,16 @@ public class CountryDatabase : MonoBehaviour {
 	}
 
 
-	private void ReadJsonDatabase () {
-		string json = File.ReadAllText (Path.Combine (Application.streamingAssetsPath, "Database.json"));
-		countries = JsonConvert.DeserializeObject<Country[]> (json);
+	private IEnumerator ReadJsonDatabase () {
+		string path = Path.Combine (Application.streamingAssetsPath, "Database.json");
+		WWW www = new WWW (path);
+		yield return www;
+
+		//string json = File.ReadAllText ();
+		countries = JsonConvert.DeserializeObject<Country[]> (www.text);
+		AssignLists ();
+		if (databaseReady != null)
+			databaseReady ();
 	}
 
 }
