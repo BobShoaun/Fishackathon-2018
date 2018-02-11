@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using Assets.SimpleAndroidNotifications;
 
 public class UIManager : MonoBehaviour {
 
@@ -14,11 +15,7 @@ public class UIManager : MonoBehaviour {
 	public CountryDatabase countryDatabase;
 	public TextMeshProUGUI titleText;
 
-
-
 	void Start () {
-		
-
 		for (int i = 0; i < movingObject.Count; i++) {
 			
 			if (movingObject [i].buttonTriggers.Count == 0) {
@@ -71,6 +68,10 @@ public class UIManager : MonoBehaviour {
 
 	public void DisableTouch(bool state){
 		FindObjectOfType<EventSystem> ().enabled = state;
+	}
+
+	public void SendPushUp(string title, string message){
+		NotificationManager.Send (new System.TimeSpan (0, 0, 0, 0), title, message, Color.red, NotificationIcon.Bell);
 	}
 
 }
